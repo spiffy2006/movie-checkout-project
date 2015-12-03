@@ -1,0 +1,10 @@
+site/node_modules
+server/bin
+server/node_modules
+logs/*
+!.gitkeep
+site/bower_components/
+site/tmp
+site/.DS_Store
+site/.idea
+site/app/jspm_packages
