@@ -19,10 +19,12 @@
   },
   "devDependencies": {
     "connect-livereload": "^0.5.4",
+    "fs-extra": "^0.26.2",
     "gulp": "^3.9.0",
     "gulp-express": "^0.3.5",
     "gulp-nodemon": "^2.0.4",
     "gulp-webserver": "^0.9.1",
-    "jsdom": "^7.2.0"
+    "jsdom": "^7.2.0",
+    "json-store": "0.0.1"
   }
 }

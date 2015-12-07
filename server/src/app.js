@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var imdbApi = require('./services/imdb-api');
+var dbApi = require('./services/db');
 
 var routes = require('./routes/index');
 
@@ -19,6 +20,13 @@ app.use(cookieParser());
 
 app.get('/imdb-api/search/:query', imdbApi.search);
 app.get('/imdb-api/movie/:link', imdbApi.getMovie);
+
+app.get('/db-api/users', dbApi.getUsers);
+app.get('/db-api/users/:fullName', dbApi.getUser);
+app.get('/db-api/users/:first_name/:last_name', dbApi.addUser);
+
+app.get('/db-api/movies', dbApi.getMovies);
+app.get('/db-api/movies/:link', dbApi.getMovie);
 
 /**
  * Development Settings

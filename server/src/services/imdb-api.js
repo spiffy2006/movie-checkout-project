@@ -1,6 +1,6 @@
 // Print all of the news items on Hacker News 
 var jsdom = require("jsdom");
-
+var db = require('./db');
 var exports = module.exports = {};
 
 var sanitizeQuery = function(query) {
@@ -37,6 +37,7 @@ exports.getMovie = function(req, res) {
         done: function (errors, window) {
             var $ = window.$;
             var movie = {
+                link: req.params.link,
                 title: $('#title-overview-widget #overview-top h1 span.itemprop').text(),
                 photo: $('#title-overview-widget .image > a > img').attr('src'),
                 rating: $('#title-overview-widget #overview-top .infobar meta').attr('content'),
@@ -44,6 +45,8 @@ exports.getMovie = function(req, res) {
                 genre: $('#title-overview-widget #overview-top .infobar a span[itemprop="genre"]').text(),
                 releaseDate: new Date($('#title-overview-widget #overview-top .infobar span.nobr > a > meta[itemprop="datePublished"]').attr('content'))
             };
+
+            db.addMovie(movie);
 
             res.end(JSON.stringify(movie));
         }
