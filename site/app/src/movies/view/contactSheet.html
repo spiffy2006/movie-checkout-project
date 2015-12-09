@@ -1,0 +1,24 @@
+<md-bottom-sheet class="md-list md-has-header">
+
+    <div layout layout-sm="column">
+        <md-subheader flex="95">
+            <md-input-container class="search-movie-input">
+                <label>Search</label>
+                <input ng-model="movieSearch" type="text">
+            </md-input-container>            
+        </md-subheader>
+        <md-button ng-click="cp.searchMovies(movieSearch)" flex="5" class="movie-search">
+            <ng-md-icon icon="search"></ng-md-icon>
+        </md-button>
+    </div>
+
+    <md-list>
+      <md-item ng-repeat="movie in cp.movieResults">
+        <md-button ng-click="cp.addMovie(movie.link)">
+            <img class="movie-list" ng-src="{{movie.photo}}" />
+            {{movie.title}}
+        </md-button>
+      </md-item>
+    </md-list>
+
+</md-bottom-sheet>

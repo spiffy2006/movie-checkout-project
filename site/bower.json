@@ -9,7 +9,9 @@
     "angular": "^1.4.6",
     "angular-animate": "^1.4.6",
     "angular-aria": "^1.4.6",
-    "angular-material": "^0.11.2"
+    "angular-material": "^0.11.2",
+    "angular-material-icons": "~0.6.0",
+    "angular-loading-spinner": "~0.0.3"
   },
   "devDependencies": {
     "angular-material": "https://github.com/angular/bower-material.git#master"

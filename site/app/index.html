@@ -23,21 +23,21 @@
 
   </head>
 
-  <body ng-app="starterApp" layout="row" ng-controller="UserController as ul" ng-cloak >
+  <body ng-app="starterApp" layout="row" ng-controller="MovieController as ul" ng-cloak >
 
   <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
                 md-component-id="left"
                 md-is-locked-open="$mdMedia('gt-sm')">
 
     <md-toolbar class="md-whiteframe-z1">
-      <h1>Users</h1>
+      <h1>Movies</h1>
     </md-toolbar>
 
     <md-list>
-      <md-list-item ng-repeat="it in ul.users">
-          <md-button ng-click="ul.selectUser(it)" ng-class="{'selected' : it === ul.selected }">
-            <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
-            {{it.name}}
+      <md-list-item ng-repeat="it in ul.movies">
+          <md-button ng-click="ul.selectMovie(it)" ng-class="{'selected' : it === ul.selected }">
+            <img height="44" class="movie-list" ng-src="{{it.photo}}" />
+            {{it.title}}
           </md-button>
       </md-list-item>
     </md-list>
@@ -48,38 +48,89 @@
   <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
 
     <md-toolbar layout="row" class="md-whiteframe-z1">
-      <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
-        <md-icon md-svg-icon="menu" ></md-icon>
-      </md-button>
-      <h1>Angular Material - Starter App</h1>
+         <md-button class="md-primary" ng-click="ul.addUserDialog($event)">
+            <md-tooltip>Add Friend</md-tooltip>
+            <ng-md-icon icon="person_add"></ng-md-icon>
+        </md-button>
+        <h1>Movie Loaner</h1>
+        <md-button class="add-movie" md-no-ink ng-click="ul.showContactOptions($event)" aria-label="Contact User">
+          <md-tooltip>Add Movie</md-tooltip>
+          <ng-md-icon icon="my_library_add"></ng-md-icon>
+        </md-button>
     </md-toolbar>
 
     <md-content flex id="content">
-        <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
-        <h2>{{ul.selected.name}}</h2>
-        <p>{{ul.selected.content}}</p>
+        
+        <div ng-show="ul.selected != null">
+            <img class="movie-list" ng-src="{{ul.selected.photo}}" />
+            <h2>{{ul.selected.title}}</h2>
+            <p>{{ul.selected.description}}</p>
+            <p>{{ul.selected.rating}}</p>
+            <p>{{ul.selected.duration}}</p>
+            <p>{{ul.selected.genre}}</p>
+            <p>{{ul.selected.releaseDate | date:'longDate'}}</p>
 
-        <md-button class="contact" md-no-ink ng-click="ul.showContactOptions($event)" aria-label="Contact User">
-          <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
-          <md-icon md-svg-icon="share"></md-icon>
-        </md-button>
+            <div layout layout-sm="column" class="checkout-form">
+                <!--<md-input-container flex>
+                    <label>First name</label>
+                    <input ng-model="ul.name" ng-focus="ul.hideNewFriend()">
+                </md-input-container>-->
+                <md-content class="md-padding" flex="95">
+                    <form ng-submit="$event.preventDefault()">
+                        <md-autocomplete
+                              ng-disabled="ul.isDisabled"
+                              md-no-cache="ul.noCache"
+                              md-selected-item="ul.selectedItem"
+                              md-search-text-change="ul.searchTextChange(ctrl.searchText)"
+                              md-search-text="ul.searchText"
+                              md-selected-item-change="ul.selectedItemChange(item)"
+                              md-items="item in ul.querySearch(ul.searchText)"
+                              md-item-text="item.display"
+                              md-min-length="0"
+                              placeholder="Search for an existing user.">
+                            <md-item-template>
+                                <span md-highlight-text="ul.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                            </md-item-template>
+                            <md-not-found>
+                                No states matching "{{ul.searchText}}" were found.
+                                <a ng-click="ul.newState(ul.searchText)">Create a new one!</a>
+                            </md-not-found>
+                        </md-autocomplete>
+                    </form>
+                </md-content>
+                <md-button class="add-friend" md-no-ink ng-click="ul.checkoutMovie()" aria-label="Check Out Movie" flex="5" ng-show="!ul.selected.checkedOut">
+                    <md-tooltip>Checkout Movie</md-tooltip>
+                    <ng-md-icon icon="check"></ng-md-icon>
+                </md-button>
+                <md-button class="remove-friend" md-no-ink ng-click="ul.checkInMovie()" aria-label="Check In Movie" flex="5" ng-show="ul.selected.checkedOut">
+                    <md-tooltip>Check InMovie</md-tooltip>
+                    <ng-md-icon icon="remove_circle_outline"></ng-md-icon>
+                </md-button>
+            </div>
+        </div>
+
       </md-content>
 
   </div>
+  <span us-spinner="{radius:30, width:14, length: 0, opacity: 0.65}"></span>
 
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
     <script src="./bower_components/angular-aria/angular-aria.js"></script>
     <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-material-icons/angular-material-icons.js"></script>
+    <script type="text/javascript" src="./bower_components/spin.js/spin.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-spinner/angular-spinner.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-loading-spinner/angular-loading-spinner.js"></script>
 
-    <script src="./src/users/Users.js"></script>
-    <script src="./src/users/UserController.js"></script>
-    <script src="./src/users/UserService.js"></script>
+    <script src="./src/movies/Movies.js"></script>
+    <script src="./src/movies/MovieController.js"></script>
+    <script src="./src/movies/MovieService.js"></script>
 
     <script type="text/javascript">
 
           angular
-              .module('starterApp', ['ngMaterial', 'users'])
+              .module('starterApp', ['ngMaterial', 'movies', 'ngLoadingSpinner'])
               .config(function($mdThemingProvider, $mdIconProvider){
 
                   $mdIconProvider
