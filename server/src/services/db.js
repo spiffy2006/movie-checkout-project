@@ -5,7 +5,6 @@ var exports = module.exports = {};
 
 var saveDb = function() {
     fs.removeSync('../db.json');
-    console.log(JSON.stringify(db));
     fs.writeJson('./src/db.json', db, function (err) {
         if (err) {
             console.log(err);
@@ -15,7 +14,12 @@ var saveDb = function() {
 };
 
 exports.getMovies = function(req, res) {
-    res.end(JSON.stringify(db.movies));
+    var movies = [];
+
+    for(var k in db.movies) {
+        movies.push(db.movies[k]);
+    }
+    res.end(JSON.stringify(movies));
 };
 
 exports.addMovie = function(movie) {
@@ -25,7 +29,6 @@ exports.addMovie = function(movie) {
 
 exports.getMovie = function(req, res) {
     var movieLink = decodeURIComponent(req.params.link);
-    console.log(movieLink);
     res.end(JSON.stringify(db.movies[movieLink]));
 };
 
@@ -34,12 +37,30 @@ exports.getUsers = function(req, res) {
 };
 
 exports.addUser = function(req, res) {
-    var fullName = req.params.first_name + " " + req.params.last_name;
-    db.users[fullName] = {first: req.params.first_name, last: req.params.last_name, fullName: fullName};
+    var fullName = req.params.firstName + " " + req.params.lastName;
+    db.users[fullName] = {first: req.params.firstName, last: req.params.lastName, fullName: fullName, movies: []};
     saveDb();
     res.end(JSON.stringify(db.users[fullName]));
 };
 
 exports.getUser = function(req, res) {
     res.end(JSON.stringify(db.users[req.params.fullName]));
+};
+
+exports.checkOutMovie = function(req, res) {
+    db.movies[req.params.movieLink].checkedOut = true;
+    db.movies[req.params.movieLink].checkedOutTo = req.params.fullName;
+    db.users[req.params.fullName].movies.push(req.params.movieLink);
+    saveDb();
+    res.json(db.movies);
+};
+
+exports.checkInMovie = function(req, res) {
+    db.movies[req.params.movieLink].checkedOut = false;
+    db.movies[req.params.movieLink].checkedOutTo = '';
+
+    var index = db.users[req.params.fullName].movies.indexOf(req.params.movieLink);
+    db.users[req.params.fullName].movies.splice(index, 1);
+    saveDb();
+    res.end(JSON.stringify(db.movies));
 };

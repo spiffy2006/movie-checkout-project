@@ -23,10 +23,13 @@ app.get('/imdb-api/movie/:link', imdbApi.getMovie);
 
 app.get('/db-api/users', dbApi.getUsers);
 app.get('/db-api/users/:fullName', dbApi.getUser);
-app.get('/db-api/users/:first_name/:last_name', dbApi.addUser);
+app.get('/db-api/users/add/:firstName/:lastName', dbApi.addUser);
 
 app.get('/db-api/movies', dbApi.getMovies);
 app.get('/db-api/movies/:link', dbApi.getMovie);
+
+app.get('/db-api/checkout/:movieLink/:fullName', dbApi.checkOutMovie);
+app.get('/db-api/checkin/:movieLink/:fullName', dbApi.checkInMovie);
 
 /**
  * Development Settings

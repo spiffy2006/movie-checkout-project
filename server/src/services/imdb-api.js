@@ -43,7 +43,10 @@ exports.getMovie = function(req, res) {
                 rating: $('#title-overview-widget #overview-top .infobar meta').attr('content'),
                 duration: $('#title-overview-widget #overview-top .infobar time').text().replace("\n", '').trim(),
                 genre: $('#title-overview-widget #overview-top .infobar a span[itemprop="genre"]').text(),
-                releaseDate: new Date($('#title-overview-widget #overview-top .infobar span.nobr > a > meta[itemprop="datePublished"]').attr('content'))
+                description: $('#title-overview-widget p[itemprop="description"]').text(),
+                releaseDate: new Date($('#title-overview-widget #overview-top .infobar span.nobr > a > meta[itemprop="datePublished"]').attr('content')),
+                checkedOut: false,
+                checkedOutTo: ''
             };
 
             db.addMovie(movie);

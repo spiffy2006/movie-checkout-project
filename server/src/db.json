@@ -7,14 +7,193 @@
       "rating": "PG-13",
       "duration": "142 min",
       "genre": "AdventureDramaSci-Fi",
-      "releaseDate": "2012-03-23T00:00:00.000Z"
+      "description": "\nKatniss Everdeen voluntarily takes her younger sister's place in the Hunger Games, a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death.",
+      "releaseDate": "2012-03-23T00:00:00.000Z",
+      "checkedOut": false,
+      "checkedOutTo": ""
+    },
+    "http://www.imdb.com/title/tt0478970/?ref_=fn_tt_tt_4": {
+      "link": "http://www.imdb.com/title/tt0478970/?ref_=fn_tt_tt_4",
+      "title": "Ant-Man",
+      "photo": "http://ia.media-imdb.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_SX214_AL_.jpg",
+      "rating": "PG-13",
+      "duration": "117 min",
+      "genre": "ActionAdventureSci-Fi",
+      "description": "\nArmed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, plan and pull off a heist that will save the world.",
+      "releaseDate": "2015-07-17T00:00:00.000Z",
+      "checkedOut": true,
+      "checkedOutTo": "Jon BonJovi"
+    },
+    "http://www.imdb.com/title/tt2395427/?ref_=fn_tt_tt_1": {
+      "link": "http://www.imdb.com/title/tt2395427/?ref_=fn_tt_tt_1",
+      "title": "Avengers: Age of Ultron",
+      "photo": "http://ia.media-imdb.com/images/M/MV5BMTU4MDU3NDQ5Ml5BMl5BanBnXkFtZTgwOTU5MDUxNTE@._V1_SY317_CR1,0,214,317_AL_.jpg",
+      "rating": "PG-13",
+      "duration": "141 min",
+      "genre": "ActionAdventureSci-Fi",
+      "description": "\nWhen Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's Mightiest Heroes to stop the villainous Ultron from enacting his terrible plans.",
+      "releaseDate": "2015-05-01T00:00:00.000Z",
+      "checkedOut": true,
+      "checkedOutTo": "Aretha Franklin"
+    },
+    "http://www.imdb.com/title/tt2194499/?ref_=fn_tt_tt_1": {
+      "link": "http://www.imdb.com/title/tt2194499/?ref_=fn_tt_tt_1",
+      "title": "About Time",
+      "photo": "http://ia.media-imdb.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_SX214_AL_.jpg",
+      "rating": "R",
+      "duration": "123 min",
+      "genre": "DramaFantasyRomance",
+      "description": "\nAt the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think.",
+      "releaseDate": "2013-11-08T00:00:00.000Z",
+      "checkedOut": true,
+      "checkedOutTo": "Benedict Cumberbatch"
+    },
+    "http://www.imdb.com/title/tt1114740/?ref_=fn_tt_tt_2": {
+      "link": "http://www.imdb.com/title/tt1114740/?ref_=fn_tt_tt_2",
+      "title": "Paul Blart: Mall Cop",
+      "photo": "http://ia.media-imdb.com/images/M/MV5BMTM2NzA1MzE1NF5BMl5BanBnXkFtZTcwOTYyNDIzMg@@._V1_SX214_AL_.jpg",
+      "rating": "PG",
+      "duration": "91 min",
+      "genre": "ActionComedyCrime",
+      "description": "\nWhen a shopping mall is taken over by a gang of organized crooks, it's up to a mild-mannered security guard to save the day.",
+      "releaseDate": "2009-01-16T00:00:00.000Z",
+      "checkedOut": true,
+      "checkedOutTo": "Paul Blart"
+    },
+    "http://www.imdb.com/title/tt0096928/?ref_=fn_tt_tt_1": {
+      "link": "http://www.imdb.com/title/tt0096928/?ref_=fn_tt_tt_1",
+      "title": "Bill & Ted's Excellent Adventure",
+      "photo": "http://ia.media-imdb.com/images/M/MV5BMTk3Mjk5MzI3OF5BMl5BanBnXkFtZTcwMTY4MzcyNA@@._V1_SX214_AL_.jpg",
+      "rating": "PG",
+      "duration": "90 min",
+      "genre": "AdventureComedySci-Fi",
+      "description": "\nTwo seemingly dumb teens struggle to prepare a historical presentation with the help of a time machine.",
+      "releaseDate": "1989-02-17T00:00:00.000Z",
+      "checkedOut": false,
+      "checkedOutTo": ""
+    },
+    "http://www.imdb.com/title/tt1213663/?ref_=fn_tt_tt_1": {
+      "link": "http://www.imdb.com/title/tt1213663/?ref_=fn_tt_tt_1",
+      "title": "The World's End",
+      "photo": "http://ia.media-imdb.com/images/M/MV5BNzA1MTk1MzY0OV5BMl5BanBnXkFtZTgwNjkzNTUwMDE@._V1_SX214_AL_.jpg",
+      "rating": "R",
+      "duration": "109 min",
+      "genre": "ActionComedySci-Fi",
+      "description": "\nFive friends who reunite in an attempt to top their epic pub crawl from twenty years earlier unwittingly become humanity's only hope for survival.",
+      "releaseDate": "2013-08-23T00:00:00.000Z",
+      "checkedOut": true,
+      "checkedOutTo": "Agent Coleson"
+    },
+    "http://www.imdb.com/title/tt1340138/?ref_=fn_tt_tt_1": {
+      "link": "http://www.imdb.com/title/tt1340138/?ref_=fn_tt_tt_1",
+      "title": "Terminator Genisys",
+      "photo": "http://ia.media-imdb.com/images/M/MV5BMjM1NTc0NzE4OF5BMl5BanBnXkFtZTgwNDkyNjQ1NTE@._V1_SX214_AL_.jpg",
+      "rating": "PG-13",
+      "duration": "126 min",
+      "genre": "ActionAdventureSci-Fi",
+      "description": "\nWhen John Connor, leader of the human resistance, sends Sgt. Kyle Reese back to 1984 to protect Sarah Connor and safeguard the future, an unexpected turn of events creates a fractured timeline.",
+      "releaseDate": "2015-07-01T00:00:00.000Z",
+      "checkedOut": true,
+      "checkedOutTo": "Scott Lang"
     }
   },
   "users": {
     "john smith": {
       "first": "john",
       "last": "smith",
-      "fullName": "john smith"
+      "fullName": "john smith",
+      "movies": []
+    },
+    "Jon BonJovi": {
+      "first": "Jon",
+      "last": "BonJovi",
+      "fullName": "Jon BonJovi",
+      "movies": [
+        "http://www.imdb.com/title/tt0478970/?ref_=fn_tt_tt_4"
+      ]
+    },
+    "Benedict Cumberbatch": {
+      "first": "Benedict",
+      "last": "Cumberbatch",
+      "fullName": "Benedict Cumberbatch",
+      "movies": [
+        "http://www.imdb.com/title/tt2395427/?ref_=fn_tt_tt_1",
+        "http://www.imdb.com/title/tt2194499/?ref_=fn_tt_tt_1"
+      ]
+    },
+    "Scott Lang": {
+      "first": "Scott",
+      "last": "Lang",
+      "fullName": "Scott Lang",
+      "movies": [
+        "http://www.imdb.com/title/tt1340138/?ref_=fn_tt_tt_1"
+      ]
+    },
+    "Miles Davis": {
+      "first": "Miles",
+      "last": "Davis",
+      "fullName": "Miles Davis",
+      "movies": []
+    },
+    "Agent Coleson": {
+      "first": "Agent",
+      "last": "Coleson",
+      "fullName": "Agent Coleson",
+      "movies": [
+        "http://www.imdb.com/title/tt1213663/?ref_=fn_tt_tt_1"
+      ]
+    },
+    "Fred Savage": {
+      "first": "Fred",
+      "last": "Savage",
+      "fullName": "Fred Savage",
+      "movies": []
+    },
+    "Aretha Franklin": {
+      "first": "Aretha",
+      "last": "Franklin",
+      "fullName": "Aretha Franklin",
+      "movies": [
+        "http://www.imdb.com/title/tt2395427/?ref_=fn_tt_tt_1"
+      ]
+    },
+    "James Jones": {
+      "first": "James",
+      "last": "Jones",
+      "fullName": "James Jones",
+      "movies": []
+    },
+    "Paul Blart": {
+      "first": "Paul",
+      "last": "Blart",
+      "fullName": "Paul Blart",
+      "movies": [
+        "http://www.imdb.com/title/tt1114740/?ref_=fn_tt_tt_2"
+      ]
+    },
+    "Mary Jane": {
+      "first": "Mary",
+      "last": "Jane",
+      "fullName": "Mary Jane",
+      "movies": []
+    },
+    "John Cena": {
+      "first": "John",
+      "last": "Cena",
+      "fullName": "John Cena",
+      "movies": []
+    },
+    "Daisy Duke": {
+      "first": "Daisy",
+      "last": "Duke",
+      "fullName": "Daisy Duke",
+      "movies": []
+    },
+    "George McFly": {
+      "first": "George",
+      "last": "McFly",
+      "fullName": "George McFly",
+      "movies": []
     }
   }
 }
